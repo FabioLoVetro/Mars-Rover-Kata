@@ -25,6 +25,26 @@ namespace Mars_Rover_Kata_Test
             cc.compareCoordinates(new CartesianCoordinates(0, 0)).Should().BeFalse();
         }
         [Test]
+        public void addToX_Test()
+        {
+            cc.addToX(+1);
+            cc.x.Should().Be(6);
+            cc.addToX(0);
+            cc.x.Should().Be(5);
+            cc.addToX(-1);
+            cc.x.Should().Be(4);
+        }
+        [Test]
+        public void addToY_Test()
+        {
+            cc.addToY(+1);
+            cc.y.Should().Be(6);
+            cc.addToY(0);
+            cc.y.Should().Be(5);
+            cc.addToY(-1);
+            cc.y.Should().Be(4);
+        }
+        [Test]
         public void setCardinalCoordinates()
         {
             cc.x = 10;
