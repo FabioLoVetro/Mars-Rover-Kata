@@ -18,10 +18,10 @@ namespace Mars_Rover_Kata
         /// <summary>
         /// Add the value to the x axe of the coordinate
         /// </summary>
-        public int addToX(int value);
+        public void addToX(int value);
         /// <summary>
         /// Add the value to the y axe of the coordinate
         /// </summary>
-        public int addToY(int value);
+        public void addToY(int value);
     }
 }
