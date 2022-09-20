@@ -38,6 +38,14 @@ namespace Mars_Rover_Kata
             get => this.y;
             set => this.y = value;
         }
+        /// <summary>
+        /// Add the value to the x axe of the coordinate
+        /// </summary>
+        public void addToX(int value) => this.x += value;
+        /// <summary>
+        /// Add the value to the y axe of the coordinate
+        /// </summary>
+        public void addToY(int value) => this.y += value;
 
         /// <summary>
         /// Compare two coordinates. return true if the coordinates are equal
