@@ -17,7 +17,8 @@ namespace Mars_Rover_Kata
         /// <param name="y">y coordinate</param>
         public CartesianCoordinates(int x, int y)
         {
-            throw new System.NotImplementedException();
+            this.x = x;
+            this.y = y;
         }
 
         /// <summary>
@@ -25,10 +26,8 @@ namespace Mars_Rover_Kata
         /// </summary>
         public int x
         {
-            get => default;
-            set
-            {
-            }
+            get => this.x;
+            set => this.x = value;
         }
 
         /// <summary>
@@ -36,10 +35,8 @@ namespace Mars_Rover_Kata
         /// </summary>
         public int y
         {
-            get => default;
-            set
-            {
-            }
+            get => this.y;
+            set => this.y = value;
         }
 
         /// <summary>
@@ -47,7 +44,8 @@ namespace Mars_Rover_Kata
         /// </summary>
         public bool compareCoordinates(ICoordinates coordinate)
         {
-            throw new NotImplementedException();
+            CartesianCoordinates cc = (CartesianCoordinates)coordinate;
+            return cc.x == this.x && cc.y == this.y;
         }
     }
 }
