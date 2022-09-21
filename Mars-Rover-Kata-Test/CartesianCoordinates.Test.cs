@@ -14,44 +14,57 @@ namespace Mars_Rover_Kata_Test
         [Test]
         public void CartesianCoordinates()
         {
-            cc.x.Should().Be(5);
-            cc.y.Should().Be(5);
+            cc.X.Should().Be(5);
+            cc.Y.Should().Be(5);
         }
+        
         [Test]
         public void compareCoordinates()
         {
-            cc.compareCoordinates(new CartesianCoordinates(5,5)).Should().BeTrue();
-            cc.compareCoordinates(new CartesianCoordinates(4, 9)).Should().BeFalse();
-            cc.compareCoordinates(new CartesianCoordinates(0, 0)).Should().BeFalse();
+            cc.CompareCoordinates(new CartesianCoordinates(5,5)).Should().BeTrue();
+            cc.CompareCoordinates(new CartesianCoordinates(4, 9)).Should().BeFalse();
+            cc.CompareCoordinates(new CartesianCoordinates(0, 0)).Should().BeFalse();
         }
         [Test]
         public void addToX_Test()
         {
-            cc.addToX(+1);
-            cc.x.Should().Be(6);
-            cc.addToX(0);
-            cc.x.Should().Be(5);
-            cc.addToX(-1);
-            cc.x.Should().Be(4);
+            cc.AddToX(+1);
+            cc.X.Should().Be(6);
+            cc.AddToX(-1);
+            cc.X.Should().Be(5);
+            cc.AddToX(0);
+            cc.X.Should().Be(5);
+            cc.AddToX(-1);
+            cc.X.Should().Be(4);
         }
         [Test]
         public void addToY_Test()
         {
-            cc.addToY(+1);
-            cc.y.Should().Be(6);
-            cc.addToY(0);
-            cc.y.Should().Be(5);
-            cc.addToY(-1);
-            cc.y.Should().Be(4);
+            cc.AddToY(+1);
+            cc.Y.Should().Be(6);
+            cc.AddToY(-1);
+            cc.Y.Should().Be(5);
+            cc.AddToY(0);
+            cc.Y.Should().Be(5);
+            cc.AddToY(-1);
+            cc.Y.Should().Be(4);
         }
         [Test]
         public void setCardinalCoordinates()
         {
-            cc.x = 10;
-            cc.y = 11;
-            cc.compareCoordinates(new CartesianCoordinates(10, 11)).Should().BeTrue();
-            cc.compareCoordinates(new CartesianCoordinates(5, 5)).Should().BeFalse();
-            cc.compareCoordinates(new CartesianCoordinates(0, 0)).Should().BeFalse();
+            cc.X = 10;
+            cc.Y = 11;
+            cc.CompareCoordinates(new CartesianCoordinates(10, 11)).Should().BeTrue();
+            cc.CompareCoordinates(new CartesianCoordinates(5, 5)).Should().BeFalse();
+            cc.CompareCoordinates(new CartesianCoordinates(0, 0)).Should().BeFalse();
+        }
+        [Test]
+        public void toStringTest()
+        {
+            cc.ToString().Should().Be("[5,5]");
+            cc.X = 10;
+            cc.Y = 11;
+            cc.ToString().Should().Be("[10,11]");
         }
     }
 }
