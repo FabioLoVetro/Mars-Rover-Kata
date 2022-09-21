@@ -14,14 +14,18 @@ namespace Mars_Rover_Kata
         /// Compare two coordinates. Return true if the coordinates are equal
         /// </summary>
         /// <param name="coordinate">The coordinate to compare</param>
-        public bool compareCoordinates(ICoordinates coordinate);
+        public bool CompareCoordinates(ICoordinates coordinate);
         /// <summary>
         /// Add the value to the x axe of the coordinate
         /// </summary>
-        public void addToX(int value);
+        public void AddToX(int value);
         /// <summary>
         /// Add the value to the y axe of the coordinate
         /// </summary>
-        public void addToY(int value);
+        public void AddToY(int value);
+        /// <summary>
+        /// Return a description of the coordates as a string
+        /// </summary>
+        public string ToString();
     }
 }
