@@ -10,6 +10,9 @@ namespace Mars_Rover_Kata
     /// </summary>
     public class CartesianCoordinates : ICoordinates
     {
+        private int x;
+        private int y;
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -24,36 +27,51 @@ namespace Mars_Rover_Kata
         /// <summary>
         /// x coordinate
         /// </summary>
-        public int x
+        public int X
         {
-            get => this.x;
-            set => this.x = value;
+            get { return this.x; }
+            set { this.x = value; }
         }
 
         /// <summary>
         /// y coordinate
         /// </summary>
-        public int y
+        public int Y
         {
-            get => this.y;
-            set => this.y = value;
+            get { return this.y; }
+            set { this.y = value; }
         }
         /// <summary>
         /// Add the value to the x axe of the coordinate
         /// </summary>
-        public void addToX(int value) => this.x += value;
+        public void AddToX(int value)
+        {
+            this.x += value;
+        }
         /// <summary>
         /// Add the value to the y axe of the coordinate
         /// </summary>
-        public void addToY(int value) => this.y += value;
+        public void AddToY(int value)
+        {
+            this.y += value;
+        }
 
         /// <summary>
         /// Compare two coordinates. return true if the coordinates are equal
         /// </summary>
-        public bool compareCoordinates(ICoordinates coordinate)
+        public bool CompareCoordinates(ICoordinates coordinate)
         {
             CartesianCoordinates cc = (CartesianCoordinates)coordinate;
             return cc.x == this.x && cc.y == this.y;
+        }
+
+        /// <summary>
+        /// Return a description of the coordates as a string
+        /// </summary>
+        override
+        public string ToString()
+        {
+            return $"[{this.x},{this.y}]";
         }
     }
 }
