@@ -8,39 +8,39 @@ namespace Mars_Rover_Kata_Test
         [SetUp]
         public void Setup()
         {
-            p = new Position(new CartesianCoordinates(7,10),"N");
+            p = new Position(new CartesianCoordinates(7, 10), "N");
         }
 
         [Test]
         public void PositionTest()
         {
-            p.coordinate.x.Should().Be(7);
-            p.coordinate.y.Should().Be(10);
-            p.orientation.Should().Be("N");
+            ((CartesianCoordinates)p.Coordinate).X.Should().Be(7);
+            ((CartesianCoordinates)p.Coordinate).Y.Should().Be(10);
+            p.Orientation.Should().Be("N");
         }
         [Test]
         public void computeNewPositionTest_LMMLMMRM_shouldBe_4_8_O()
         {
-            p.computeNewPosition("LMMLMMRM");
-            p.coordinate.x.Should().Be();
-            p.coordinate.y.Should().Be();
-            p.orientation.Should().Be("N");
+            p.ComputeNewPosition("LMMLMMRM");
+            ((CartesianCoordinates)p.Coordinate).X.Should().Be(4);
+            ((CartesianCoordinates)p.Coordinate).Y.Should().Be(8);
+            p.Orientation.Should().Be("O");
         }
         [Test]
         public void computeNewPositionTest_RRMRMMMLMRMM_shouldBe_2_8_O()
         {
-            p.computeNewPosition("RRMRMMMLMRMM");
-            p.coordinate.x.Should().Be();
-            p.coordinate.y.Should().Be();
-            p.orientation.Should().Be("N");
+            p.ComputeNewPosition("RRMRMMMLMRMM");
+            ((CartesianCoordinates)p.Coordinate).X.Should().Be(2);
+            ((CartesianCoordinates)p.Coordinate).Y.Should().Be(8);
+            p.Orientation.Should().Be("O");
         }
         [Test]
         public void computeNewPositionTest_LMLMLMLM_shouldBe_7_10_N()
         {
-            p.computeNewPosition("LMLMLMLM");
-            p.coordinate.x.Should().Be();
-            p.coordinate.y.Should().Be();
-            p.orientation.Should().Be("N");
+            p.ComputeNewPosition("LMLMLMLM");
+            ((CartesianCoordinates)p.Coordinate).X.Should().Be(7);
+            ((CartesianCoordinates)p.Coordinate).Y.Should().Be(10);
+            p.Orientation.Should().Be("N");
         }
     }
 }
