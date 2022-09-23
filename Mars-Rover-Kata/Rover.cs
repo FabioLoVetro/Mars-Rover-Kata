@@ -12,8 +12,8 @@ namespace Mars_Rover_Kata
     {
         private string name;
         private int max_weight_allowed;
-        List<Tools> tools;
-        List<Objects> objects;
+        LinkedList<Tools> tools;
+        LinkedList<Objects> objects;
 
         /// <summary>
         /// Constructor
@@ -21,7 +21,10 @@ namespace Mars_Rover_Kata
         /// <param name="name">The name of the rover</param>
         public Rover(string name, int maxWeightAllowed)
         {
-            throw new System.NotImplementedException();
+            this.name = name;
+            this.max_weight_allowed = maxWeightAllowed;
+            this.tools = new LinkedList<Tools>();
+            this.objects = new LinkedList<Objects>();
         }
 
         /// <summary>
@@ -30,42 +33,53 @@ namespace Mars_Rover_Kata
         public string Name
         {
             get { return this.name; }
-            set { this.name = value;}
+            private set { this.name = value;}
         }
 
         /// <summary>
         /// The tools of the rover
         /// </summary>
-        public List<Tools> Tools
+        public LinkedList<Tools> Tools
         {
             get => this.tools;
-            set => this.tools = value;
+            private set => this.tools = value;
         }
         /// <summary>
         /// The objects of the rover
         /// </summary>
-        public List<Objects> Objects
+        public LinkedList<Objects> Objects
         {
             get => this.objects;
-            set => this.objects = value;
+            private set => this.objects = value;
         }
 
         /// <summary>
         /// The maximum weight allowed to be carried
         /// </summary>
-        private int MaxWeightAllowed
+        public int MaxWeightAllowed
         {
             get => this.max_weight_allowed;
-            set => this.max_weight_allowed = value;
+            private set => this.max_weight_allowed = value;
         }
 
         /// <summary>
         /// Add a tool to the rover
         /// </summary>
         /// <param name="tools">The tool to add</param>
-        public void addTool(Mars_Rover_Kata.Tools tool)
+        public bool addTool(Mars_Rover_Kata.Tools tool)
         {
-            throw new System.NotImplementedException();
+            bool added = false;
+            int weight = 0;
+            foreach(Tools t in this.Tools)
+                weight += t.Weight;
+            foreach (Objects o in this.Objects)
+                weight += o.Weight;
+            if (tool.Weight <= (this.MaxWeightAllowed - weight))
+            {
+                this.Tools.AddLast(tool);
+                added = true;
+            }
+            return added;
         }
 
         /// <summary>
@@ -74,16 +88,27 @@ namespace Mars_Rover_Kata
         /// <param name="tool">The tool to remove</param>
         public void removeTool(Mars_Rover_Kata.Tools tool)
         {
-            throw new System.NotImplementedException();
+            this.Tools.Remove(tool);
         }
 
         /// <summary>
         /// Add an object to the rover
         /// </summary>
         /// <param name="objects">The object to collect</param>
-        public void addObject(Mars_Rover_Kata.Objects objects)
+        public bool addObject(Mars_Rover_Kata.Objects objects)
         {
-            throw new System.NotImplementedException();
+            bool added = false;
+            int weight = 0;
+            foreach (Objects o in this.Objects)
+                weight += o.Weight;
+            foreach (Tools t in this.Tools)
+                weight += t.Weight;
+            if (objects.Weight <= (this.MaxWeightAllowed - weight))
+            {
+                this.objects.AddLast(objects);
+                added = true;
+            }
+            return added;
         }
 
         /// <summary>
@@ -91,7 +116,7 @@ namespace Mars_Rover_Kata
         /// </summary>
         public void removeObject(Objects objects)
         {
-            throw new System.NotImplementedException();
+            this.objects.Remove(objects);
         }
     }
 }
