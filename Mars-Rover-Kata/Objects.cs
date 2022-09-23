@@ -12,6 +12,15 @@ namespace Mars_Rover_Kata
     {
         private string name;
         private int weight;
+
+        /// <param name="name">The name of the object</param>
+        /// <param name="weight">The weight of the object</param>
+        public Objects(string name, int weight)
+        {
+            this.name = name;
+            this.weight = weight;
+        }
+
         /// <summary>
         /// The name of the object
         /// </summary>
