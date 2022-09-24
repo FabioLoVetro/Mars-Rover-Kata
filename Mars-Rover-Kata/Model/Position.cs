@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Mars_Rover_Kata.Model.Interface;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model
 {
     /// <summary>
     /// A Position represents the position of the Rover on the Plateau. A Position is composed with a coordinate and an orientation.
@@ -46,7 +47,7 @@ namespace Mars_Rover_Kata
         public void ComputeNewPosition(string instruction)
         {
             string newOrientation = this.Orientation;
-            foreach (char s in instruction)
+            foreach (char s in instruction.ToUpper())
             {
                 if (this.orientation == "N" && s == 'L') newOrientation = "O";
                 if (this.orientation == "N" && s == 'R') newOrientation = "E";
@@ -62,6 +63,12 @@ namespace Mars_Rover_Kata
                 if (this.orientation == "S" && s == 'M') this.coordinate.AddToY(-1);
                 if (this.orientation == "O" && s == 'M') this.coordinate.AddToX(-1);
             }
+        }
+
+        override
+        public string ToString()
+        {
+            return $"Position:[{this.coordinate.ToString()}, Orientation:[{this.Orientation}]]";
         }
     }
 }

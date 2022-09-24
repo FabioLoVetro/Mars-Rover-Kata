@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Mars_Rover_Kata.Model.Abstract;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model
 {
     /// <summary>
     /// The class represent a Rover. A Rover can bring tools and objects with weight not excessive to the max weight allowed.
@@ -66,7 +67,7 @@ namespace Mars_Rover_Kata
         /// Add a tool to the rover
         /// </summary>
         /// <param name="tools">The tool to add</param>
-        public bool addTool(Mars_Rover_Kata.Tools tool)
+        public bool addTool(Tools tool)
         {
             bool added = false;
             int weight = 0;
@@ -86,7 +87,7 @@ namespace Mars_Rover_Kata
         /// Remove a tool from the rover
         /// </summary>
         /// <param name="tool">The tool to remove</param>
-        public void removeTool(Mars_Rover_Kata.Tools tool)
+        public void removeTool(Tools tool)
         {
             this.Tools.Remove(tool);
         }
@@ -95,7 +96,7 @@ namespace Mars_Rover_Kata
         /// Add an object to the rover
         /// </summary>
         /// <param name="objects">The object to collect</param>
-        public bool addObject(Mars_Rover_Kata.Objects objects)
+        public bool addObject(Objects objects)
         {
             bool added = false;
             int weight = 0;
@@ -117,6 +118,21 @@ namespace Mars_Rover_Kata
         public void removeObject(Objects objects)
         {
             this.objects.Remove(objects);
+        }
+        /// <summary>
+        /// Return a description of the rover
+        /// </summary>
+        /// <returns></returns>
+        override
+        public string ToString()
+        {
+            string tools = "";
+            string objects = "";
+            foreach (Tools t in this.tools)
+                tools += $"{t.ToString} ";
+            foreach (Objects o in this.objects)
+                objects += $"{o.ToString} ";
+            return $"Rover:[Name:{this.Name}, Max Weight:{this.MaxWeightAllowed}, Tools:{tools}, Objects:{objects}]";
         }
     }
 }

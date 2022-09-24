@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Mars_Rover_Kata.Model.Interface;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model
 {
     /// <summary>
     /// Cartesian Coordinates
@@ -71,7 +72,7 @@ namespace Mars_Rover_Kata
         override
         public string ToString()
         {
-            return $"[{this.x},{this.y}]";
+            return $"Coordinates:[{this.x},{this.y}]";
         }
     }
 }

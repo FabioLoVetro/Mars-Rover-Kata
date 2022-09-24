@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Mars_Rover_Kata.Model.Abstract;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model
 {
     /// <summary>
     /// A Rectangular Plateau is a rectangular shaped Plateau

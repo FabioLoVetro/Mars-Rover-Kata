@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model.Interface
 {
     /// <summary>
     /// Interface Coordinates

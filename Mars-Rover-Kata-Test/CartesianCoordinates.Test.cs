@@ -1,10 +1,11 @@
 using FluentAssertions;
-using Mars_Rover_Kata;
+using Mars_Rover_Kata.Model;
 namespace Mars_Rover_Kata_Test
 {
     public class CartesianCoordinatesTests
     {
         CartesianCoordinates cc;
+
         [SetUp]
         public void Setup()
         {
@@ -59,12 +60,12 @@ namespace Mars_Rover_Kata_Test
             cc.CompareCoordinates(new CartesianCoordinates(0, 0)).Should().BeFalse();
         }
         [Test]
-        public void toStringTest()
+        public void ToStringTest()
         {
-            cc.ToString().Should().Be("[5,5]");
+            cc.ToString().Should().Be("Coordinates:[5,5]");
             cc.X = 10;
             cc.Y = 11;
-            cc.ToString().Should().Be("[10,11]");
+            cc.ToString().Should().Be("Coordinates:[10,11]");
         }
     }
 }

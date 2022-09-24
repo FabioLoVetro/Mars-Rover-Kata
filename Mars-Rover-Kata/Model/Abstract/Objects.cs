@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model.Abstract
 {
     /// <summary>
     /// The class rappresent objects that is possible find on the Plateau
@@ -26,8 +26,8 @@ namespace Mars_Rover_Kata
         /// </summary>
         public string Name
         {
-            get => this.name;
-            set => this.name = value;
+            get => name;
+            set => name = value;
         }
 
         /// <summary>
@@ -35,8 +35,14 @@ namespace Mars_Rover_Kata
         /// </summary>
         public int Weight
         {
-            get => this.weight;
-            set => this.weight = value;
+            get => weight;
+            set => weight = value;
+        }
+
+        override
+        public string ToString()
+        {
+            return $"Object:[Name:{Name}, Weight:{Weight}]";
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Mars_Rover_Kata;
+﻿using Mars_Rover_Kata.Logic;
 
 namespace Mars_Rover_Kata
 {

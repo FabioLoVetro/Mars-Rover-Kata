@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Mars_Rover_Kata.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Mars_Rover_Kata.Model.Abstract;
 
-namespace Mars_Rover_Kata.Interface
+namespace Mars_Rover_Kata.Model.Interface
 {
     /// <summary>
     /// Interface Command
@@ -14,10 +16,6 @@ namespace Mars_Rover_Kata.Interface
         /// Execute the command
         /// </summary>
         /// <param name="instruction">The instruction to execute</param>
-        public void execute(string instruction);
-        /// <summary>
-        /// Validate the instruction to execute
-        /// </summary>
-        public bool commandValidator(string instruction);
+        public void Execute(MissionControl mc, Plateau p, string[] instruction);
     }
 }

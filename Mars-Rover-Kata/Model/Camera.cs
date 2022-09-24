@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Mars_Rover_Kata.Model.Abstract;
 
-namespace Mars_Rover_Kata
+namespace Mars_Rover_Kata.Model
 {
     /// <summary>
     /// A special camera allow to make photo with different filters.
     /// </summary>
     public class Camera : Tools
     {
-        /// <param name="name">The name</param>
-        /// <param name="weight">The weight</param>
-        public Camera(string name, int weight): base (name, weight)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="_name"></param>
+        /// <param name="_weight"></param>
+        public Camera(string _name, int _weight) : base(_name, _weight)
         {
         }
 
@@ -21,10 +25,8 @@ namespace Mars_Rover_Kata
         /// </summary>
         public string filter
         {
-            get => default;
-            set
-            {
-            }
+            get => this.filter;
+            set => this.filter = value;
         }
     }
 }

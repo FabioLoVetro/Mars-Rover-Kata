@@ -1,5 +1,7 @@
 using FluentAssertions;
-using Mars_Rover_Kata;
+using Mars_Rover_Kata.Model;
+using Mars_Rover_Kata.Model.Abstract;
+
 namespace Mars_Rover_Kata_Test
 {
     public class RoverTests
