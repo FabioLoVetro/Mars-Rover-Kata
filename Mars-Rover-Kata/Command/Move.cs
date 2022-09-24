@@ -15,6 +15,12 @@ namespace Mars_Rover_Kata.Command
     /// </summary>
     public class Move : ICommand
     {
+        /// <summary>
+        /// Move a rover in the plateau
+        /// </summary>
+        /// <param name="mc"></param>
+        /// <param name="p"></param>
+        /// <param name="instruction"></param>
         public void Execute(MissionControl mc, Plateau p, string[] instruction)
         {
             foreach (Rover r in mc.Rovers.Keys)
