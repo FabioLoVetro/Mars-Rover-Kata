@@ -1,12 +1,12 @@
 using FluentAssertions;
-using Mars_Rover_Kata;
+using Mars_Rover_Kata.Model;
+using Mars_Rover_Kata.Model.Abstract;
+
 namespace Mars_Rover_Kata_Test
 {
     public class RettangulaPlateauTests
     {
         RettangularPlateau p;
-        Rover r1;
-        Rover r2;
         Objects rock1;
         Objects rock2;
         Tools robotArm;
@@ -16,14 +16,10 @@ namespace Mars_Rover_Kata_Test
         public void Setup()
         {
             p = new RettangularPlateau(new CartesianCoordinates(10,10));
-            r1 = new Rover("R01", 10);
-            r2 = new Rover("R02", 8);
             rock1 = new Rock("Quarzo", 5);
             rock2 = new Rock("Green Rock", 2);
             robotArm = new RobotArm("RA1", 2);
             camera = new Camera("CA1", 1);
-            p.addRover(r1, new Position(new CartesianCoordinates(4, 5), "N"));
-            p.addRover(r2, new Position(new CartesianCoordinates(0, 5), "E"));
             p.addObject(rock1, new CartesianCoordinates(7, 2));
             p.addObject(rock2, new CartesianCoordinates(2, 7));
             p.addTool(robotArm, new CartesianCoordinates(6, 3));
@@ -34,18 +30,9 @@ namespace Mars_Rover_Kata_Test
         public void RettangularPlateau()
         {
             p.Objects.Should().NotBeNull();
-            p.Rovers.Should().NotBeNull();
             p.Tools.Should().NotBeNull();
             p.Size.X.Should().Be(10);
             p.Size.Y.Should().Be(10);
-        }
-
-        [Test]
-        public void RoversTest()
-        {
-            p.Rovers.Count.Should().Be(2);
-            p.Rovers.ContainsKey(r1).Should().BeTrue();
-            p.Rovers.ContainsKey(r2).Should().BeTrue();
         }
 
         [Test]
