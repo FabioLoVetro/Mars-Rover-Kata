@@ -1,7 +1,8 @@
 # Mars Rover Kata
 Mars Rover kata is a program to move rovers around the surface of Mars!
 The surface of Mars is represented by a Plateau.
-Rovers navigate the Plateau so they can use their special cameras and robot arms to collect samples back to Planet Earth
+Rovers navigate the Plateau so they can use their special cameras and robot arms to collect samples back to Planet Earth.
+Rovers has a limit of transportation weight.
 Representation of a Rover’s Position on the Plateau
 A Rover’s position is represented by x and y co-ordinates and the letters N, S, W, E to represent North, South, West, East (the four cardinal compass points) respectively.
 
