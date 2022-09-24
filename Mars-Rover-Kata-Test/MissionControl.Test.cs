@@ -36,7 +36,7 @@ namespace Mars_Rover_Kata_Test
         [Test]
         public void ToStringTest()
         {
-            mc.ToString().Should().Be("Rover:[Name:R01, Max Weight:10, Tools:, Objects:], Position:[Coordinates:[4,5], Orientation:[N]]\nRover:[Name:R02, Max Weight:8, Tools:, Objects:], Position:[Coordinates:[0,5], Orientation:[E]]\n");
+            mc.ToString().Should().Be("Rover:[Name:R01, Max Weight:10  ], Position:[Coordinates:[4,5], Orientation:[N]]\nRover:[Name:R02, Max Weight:8  ], Position:[Coordinates:[0,5], Orientation:[E]]\n");
         }
     }
 }
