@@ -1,96 +1,125 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="Mars_Rover_Kata.Plateau">
-    <Position X="4.75" Y="3.25" Width="4.25" />
+  <Class Name="Mars_Rover_Kata.Command.Move" BaseTypeListCollapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQBAAACAgAAEQCAAAAAAAAEESAAAAAAAQAA=</HashCode>
-      <FileName>Plateau.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\Move.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mars_Rover_Kata.Command.PickUp" BaseTypeListCollapsed="true">
+    <Position X="11" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\PickUp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mars_Rover_Kata.Model.Abstract.Objects">
+    <Position X="4.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAACAEAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Abstract\Objects.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.CartesianCoordinates" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="12.5" Width="5.5" />
+  <Class Name="Mars_Rover_Kata.Model.Abstract.Plateau">
+    <Position X="1.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAARgAAAAYAA=</HashCode>
-      <FileName>CartesianCoordinates.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.1" />
-  </Class>
-  <Class Name="Mars_Rover_Kata.Rover">
-    <Position X="9.75" Y="4.5" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAEQCQAAQBEAAEASAAAACAAAAA=</HashCode>
-      <FileName>Rover.cs</FileName>
+      <HashCode>AAAAAAAAAQBAAAAEAAAEQCAAAAAAAAEASAAAAAAAAAA=</HashCode>
+      <FileName>Model\Abstract\Plateau.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.Rock">
-    <Position X="13.25" Y="7.25" Width="1.5" />
+  <Class Name="Mars_Rover_Kata.Model.Abstract.Tools">
+    <Position X="2.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rock.cs</FileName>
+      <HashCode>AAABIAAAAAAAAAAEAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Abstract\Tools.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.Tools">
-    <Position X="1.75" Y="4.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAEAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>Tools.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Mars_Rover_Kata.Camera">
-    <Position X="3" Y="8" Width="1.5" />
+  <Class Name="Mars_Rover_Kata.Model.Camera">
+    <Position X="0.75" Y="3.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Camera.cs</FileName>
+      <FileName>Model\Camera.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.RobotArm">
-    <Position X="0.5" Y="8" Width="1.5" />
+  <Class Name="Mars_Rover_Kata.Model.CartesianCoordinates" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>RobotArm.cs</FileName>
+      <HashCode>AAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAARgAAAAYAA=</HashCode>
+      <FileName>Model\CartesianCoordinates.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Mars_Rover_Kata.RettangularPlateau">
-    <Position X="5.5" Y="8.25" Width="2.75" />
+  <Class Name="Mars_Rover_Kata.Model.Position">
+    <Position X="9" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RettangularPlateau.cs</FileName>
+      <HashCode>AAABAAIAAQAABAAEAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Position.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.Position">
-    <Position X="11.5" Y="8.75" Width="3.25" />
+  <Class Name="Mars_Rover_Kata.Model.RettangularPlateau" Collapsed="true">
+    <Position X="1.25" Y="9.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAABAAIAAQAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Position.cs</FileName>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Model\RettangularPlateau.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.MarsRoverKata">
-    <Position X="5" Y="0.75" Width="2.5" />
+  <Class Name="Mars_Rover_Kata.Model.RobotArm">
+    <Position X="4" Y="3.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAABAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MarsRoverKata.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\RobotArm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Mars_Rover_Kata.CommandMove">
-    <Position X="12.25" Y="0.5" Width="3" />
+  <Class Name="Mars_Rover_Kata.Model.Rock">
+    <Position X="4.5" Y="8.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
-      <FileName>CommandMove.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Rock.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Orientation="Left" Position="0.362" />
   </Class>
-  <Class Name="Mars_Rover_Kata.CommandPickUp">
-    <Position X="12.25" Y="2" Width="3" />
+  <Class Name="Mars_Rover_Kata.Model.Rover">
+    <Position X="7.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
-      <FileName>CommandPickUp.cs</FileName>
+      <HashCode>AAAAAAAAAAAAEAAEAAAEQCQAAQBEAAEASAAAACAAAAA=</HashCode>
+      <FileName>Model\Rover.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Mars_Rover_Kata.ICoordinates">
-    <Position X="0.5" Y="10.25" Width="5.5" />
+  <Class Name="Mars_Rover_Kata.Logic.CommandGenerator">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAQAEAAABAAEBAIIAACAAAAAABIAAAA=</HashCode>
+      <FileName>Logic\CommandGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mars_Rover_Kata.Logic.MarsRoverKata">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEIAAAAAAAAAAAABACgAAAAAAAAAEA=</HashCode>
+      <FileName>Logic\MarsRoverKata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mars_Rover_Kata.Logic.MissionControl">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACEgAAAAAAAAAAAAAAEAAAAAAAAQAA=</HashCode>
+      <FileName>Logic\MissionControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Mars_Rover_Kata.Model.Interface.ICommand">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Interface\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mars_Rover_Kata.Model.Interface.ICoordinates">
+    <Position X="12.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>ICoordinates.cs</FileName>
+      <FileName>Model\Interface\ICoordinates.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
