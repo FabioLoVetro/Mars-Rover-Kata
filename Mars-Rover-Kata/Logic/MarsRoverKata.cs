@@ -50,7 +50,7 @@ namespace Mars_Rover_Kata.Logic
         public MissionControl MissionControl
         {
             get { return this._missionControl; }
-            set { this._missionControl = value; }
+            private set { this._missionControl = value; }
         }
 
 
