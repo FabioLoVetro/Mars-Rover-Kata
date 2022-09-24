@@ -81,13 +81,13 @@ namespace Mars_Rover_Kata.Logic
             Console.WriteLine("Type the size of the Plateau [Example 10 10]\n");
             string size = Console.ReadLine();
             this.Plateau = new RettangularPlateau(new CartesianCoordinates(int.Parse(size.Split(' ')[0]), int.Parse(size.Split(' ')[1])));
-            Console.WriteLine("Welcome on Mars\n");
+            Console.WriteLine("\nWelcome on Mars\n");
             Console.WriteLine("Have a look at the situation\n");
             while (!end)
             {
                 Console.WriteLine(this.MissionControl.ToString());
                 Console.WriteLine(this.Plateau.ToString());
-                Console.WriteLine("Type a command like [R01 Move LMLMMRM]");
+                Console.WriteLine("Type an instruction:");
                 input = Console.ReadLine();
                 Console.WriteLine();
                 if (input == "end")
