@@ -26,21 +26,20 @@ namespace Mars_Rover_Kata.Logic
         /// </summary>
         public MarsRoverKata()
         {
-            this.Plateau = new RettangularPlateau(new CartesianCoordinates(10, 10));
             this.CommandGenerator = new CommandGenerator();
             this.MissionControl = new MissionControl();
             Rover r1 = new Rover("R01", 10);
             Rover r2 = new Rover("R02", 8);
             Objects rock1 = new Rock("Quarzo", 5);
-            Objects rock2 = new Rock("Green Rock", 2);
-            Tools robotArm = new RobotArm("Robot Arm 01", 2);
-            Tools camera = new Camera("Camera 01", 1);
-            this.MissionControl.addRover(r1, new Position(new CartesianCoordinates(4, 5), "N"));
-            this.MissionControl.addRover(r2, new Position(new CartesianCoordinates(0, 5), "E"));
-            this.Plateau.addObject(rock1, new CartesianCoordinates(7, 2));
-            this.Plateau.addObject(rock2, new CartesianCoordinates(2, 7));
-            this.Plateau.addTool(robotArm, new CartesianCoordinates(6, 3));
-            this.Plateau.addTool(camera, new CartesianCoordinates(9, 1));
+            Objects rock2 = new Rock("GreenRock", 2);
+            Tools robotArm = new RobotArm("RobotArm", 2);
+            Tools camera = new Camera("Camera", 1);
+            this.MissionControl.addRover(r1, new Position(new CartesianCoordinates(0, 0), "N"));
+            this.MissionControl.addRover(r2, new Position(new CartesianCoordinates(0, 0), "E"));
+            r1.addObject(rock1);
+            r2.addObject(rock2);
+            r1.addTool(robotArm);
+            r2.addTool(camera);
             this.Start();
         }
 
@@ -79,6 +78,9 @@ namespace Mars_Rover_Kata.Logic
         {
             bool end = false;
             string input;
+            Console.WriteLine("Type the size of the Plateau [Example 10 10]\n");
+            string size = Console.ReadLine();
+            this.Plateau = new RettangularPlateau(new CartesianCoordinates(int.Parse(size.Split(' ')[0]), int.Parse(size.Split(' ')[1])));
             Console.WriteLine("Welcome on Mars\n");
             Console.WriteLine("Have a look at the situation\n");
             while (!end)
