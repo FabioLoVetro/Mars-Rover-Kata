@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Mars_Rover_Kata.Logic;
+using Mars_Rover_Kata.Model;
 
 namespace Mars_Rover_Kata_Test
 {
@@ -13,12 +14,6 @@ namespace Mars_Rover_Kata_Test
             mrk = new MarsRoverKata();
         }
         
-        [Test]
-        public void MarsRoverKata()
-        {
-            mrk.Plateau.Should().NotBeNull();
-            mrk.CommandGenerator.Should().NotBeNull();
-            mrk.MissionControl.Should().NotBeNull();
-        }
+
     }
 }
