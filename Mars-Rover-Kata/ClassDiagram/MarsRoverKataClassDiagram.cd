@@ -108,6 +108,14 @@
       <FileName>Logic\MissionControl.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Mars_Rover_Kata.Command.DropOff">
+    <Position X="11" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\DropOff.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="Mars_Rover_Kata.Model.Interface.ICommand">
     <Position X="11" Y="5" Width="1.5" />
     <TypeIdentifier>
