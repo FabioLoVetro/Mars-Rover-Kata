@@ -31,7 +31,7 @@ namespace Mars_Rover_Kata.Logic
         /// <param name="instruction"></param>
         public bool Execute(MissionControl mc, Plateau p, string instruction)
         {
-            Console.WriteLine($"Command: {_instruction}");
+            //Console.WriteLine($"Command: {_instruction}");
             if (!CommandAnalyzer(mc, p, instruction)) return false;
             _icommand = (ICommand)GetInstance($"Mars_Rover_Kata.Command.{_command}");
             _icommand.Execute(mc, p, _arrayInstruction);
@@ -80,12 +80,13 @@ namespace Mars_Rover_Kata.Logic
                 if (r.Name == _firstParameter) result = true;
 
             //second parameter should be a command
-            if (Command != "Move") result = false;
+            if (Command != "Move" && Command != "PickUp" && Command != "DropOff") result = false;
 
             //third parameter should be a object/tool/instruction of moviment
 
             return result;
         }
+
         /// <summary>
         /// First parameter 
         /// </summary>
