@@ -129,10 +129,10 @@ namespace Mars_Rover_Kata.Model
             string tools = "";
             string objects = "";
             foreach (Tools t in this.tools)
-                tools += $"{t.ToString} ";
+                tools += $"{t.ToString()} ";
             foreach (Objects o in this.objects)
-                objects += $"{o.ToString} ";
-            return $"Rover:[Name:{this.Name}, Max Weight:{this.MaxWeightAllowed}, Tools:{tools}, Objects:{objects}]";
+                objects += $"{o.ToString()} ";
+            return $"Rover:[Name:{this.Name}, Max Weight:{this.MaxWeightAllowed} {tools} {objects}]";
         }
     }
 }
